@@ -44,15 +44,22 @@
     "@ocap/mcrypto": "^1.18.108",
     "@ocap/wallet": "^1.18.108",
     "axios": "^1.6.2",
+    "body-parser": "^1.20.2",
     "cookie-parser": "^1.4.6",
     "cors": "^2.8.5",
     "dotenv-flow": "^3.3.0",
     "express": "^4.18.2",
     "express-async-errors": "^3.1.1",
+    "express-validator": "^7.1.0",
+    "knex": "^3.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-intersection-observer": "^9.10.3",
     "react-router-dom": "^6.21.0",
-    "rimraf": "^3.0.2"
+    "rimraf": "^3.0.2",
+    "semantic-ui-css": "^2.5.0",
+    "semantic-ui-react": "^2.1.5",
+    "sqlite3": "^5.1.7"
   },
   "devDependencies": {
     "@arcblock/eslint-config": "^0.2.4",
