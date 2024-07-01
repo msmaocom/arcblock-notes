@@ -1,0 +1,6 @@
+
+## profile
+curl http://localhost:8091/api/profile
+
+### update profile
+curl -X PUT -H "Content-Type: application/json" -d '{"username":"user1334333","phone":"103333","email":"1323333@test.com"}' http://127.0.0.1:8091/api/profile/1

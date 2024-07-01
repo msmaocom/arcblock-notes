@@ -4,6 +4,7 @@ const path = require('path');
 const cors = require('cors');
 const express = require('express');
 const cookieParser = require('cookie-parser');
+const bodyParser = require('body-parser');
 const fallback = require('@blocklet/sdk/lib/middlewares/fallback');
 
 const { name, version } = require('../package.json');
@@ -13,6 +14,8 @@ const app = express();
 
 app.set('trust proxy', true);
 app.use(cookieParser());
+app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.json())
 app.use(express.json({ limit: '1 mb' }));
 app.use(express.urlencoded({ extended: true, limit: '1 mb' }));
 app.use(cors());
