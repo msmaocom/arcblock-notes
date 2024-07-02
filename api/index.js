@@ -6,6 +6,7 @@ const express = require('express');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const fallback = require('@blocklet/sdk/lib/middlewares/fallback');
+const sqlite3 = require('sqlite3').verbose();
 
 const { name, version } = require('../package.json');
 const logger = require('./libs/logger');
@@ -19,6 +20,11 @@ app.use(bodyParser.json())
 app.use(express.json({ limit: '1 mb' }));
 app.use(express.urlencoded({ extended: true, limit: '1 mb' }));
 app.use(cors());
+
+const db = new sqlite3.Database(':memory:');
+db.serialize(() => {
+  db.run('select 1');
+});
 
 const router = express.Router();
 router.use('/api', require('./routes'));
