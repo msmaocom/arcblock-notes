@@ -67,6 +67,18 @@ After developing a blocklet, you may need to bundle it. Use `npm run bundle` com
 
   > Make sure the blocklet is bundled before deployment.
 
+## Init
+
+- Init database by curl /api/init
+```
+# eg: curl https://bbqas6wspimlzffk4b6yhtd7h5xpb3voewwwlbvuk44-192-168-3-20.ip.abtnet.io/notes/api/init
+curl https://xxxx/notes/api/init
+
+# open home page now
+open https://bbqas6wspimlzffk4b6yhtd7h5xpb3voewwwlbvuk44-192-168-3-20.ip.abtnet.io/notes/
+
+```
+
 ## Upload to blocklet store
 
 - If you want to upload the blocklet to any store for other users to download and use, you can following the following instructions.
