@@ -67,7 +67,7 @@ After developing a blocklet, you may need to bundle it. Use `npm run bundle` com
 
   > Make sure the blocklet is bundled before deployment.
 
-## Init
+## Init Database
 
 - Init database by curl /api/init
 ```
